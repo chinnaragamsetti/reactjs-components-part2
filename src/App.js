@@ -37,7 +37,7 @@ class App extends Component {
     this.setState({searchInput: event.target.value})
   }
 
-  deleteUser = uniqueNo => {
+  deleteuser = uniqueNo => {
     const {userDetailsList} = this.state
     const afteruserdeletelist = userDetailsList.filter(
       each => each.uniqueNo !== uniqueNo,
@@ -63,7 +63,7 @@ class App extends Component {
             <UserProfile
               userDetails={eachUser}
               key={eachUser.uniqueNo}
-              deleteUser={this.deleteUser}
+              deleteUser={this.deleteuser}
             />
           ))}
         </ul>
